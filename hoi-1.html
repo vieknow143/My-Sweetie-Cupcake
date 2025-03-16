@@ -262,50 +262,80 @@ nav ul li a:hover {
         .prev { left: 10px; }
         .next { right: 10px; }
 
-
-.keunggulan{
-	width: 1000px;
-	height: 500px;
-	background-color: #F5C6AA;
-	margin: auto;
-    font-family: 'Poppins', serif ;
+/* Style untuk body */
+.testimonial{
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  box-sizing: border-box;
 }
 
-.keunggulan .kotak1{
-    position: absolute;
-    padding: 5px 20px 5px 20px;
-	border-radius: 20px;
-    background-color: #fffdf5;
-    margin-top: -300px;
-    margin-left: 550px;
+/* Container untuk testimonial */
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 
-.keunggulan .kotak2{
-    position: absolute;
-    padding: 5px 20px 5px 20px;
-	border-radius: 20px;
-    background-color: #fffdf5;
-    margin-top: -200px;
-    margin-left: 500px;
+/* Card testimonial */
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease;
 }
 
-.keunggulan .kotak3{
-    position: absolute;
-    padding: 5px 20px 5px 20px;
-	border-radius: 20px;
-    background-color: #fffdf5;
-    margin-top: -260px;
-    margin-left: 750px;
+/* Efek hover untuk card */
+.testimonial-card:hover {
+  transform: translateY(-10px);
 }
 
-.keunggulan .kotak4{
-    position: absolute;
-    padding: 5px 20px 5px 20px;
-	border-radius: 20px;
-    background-color: #fffdf5;
-    margin-top: -150px;
-    margin-left: 740px;
+/* Gambar profil */
+.testimonial-img img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
+
+/* Teks testimonial */
+.testimonial-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Nama dan posisi */
+.testimonial-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.testimonial-position {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 600px) {
+  .testimonial-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
 
 .seg4 {
 	width: 1000px;
@@ -398,6 +428,23 @@ nav ul li a:hover {
     color: #Ffff;
     font-family: "DM Serif Text", serif;
 }
+
+.front {
+  position: relative;
+  z-index: 2; /* Objek ini akan berada di depan */
+  background-color: red;
+  width: 200px;
+  height: 200px;
+}
+
+.back {
+  position: relative;
+  z-index: 1; /* Objek ini akan berada di belakang */
+  background-color: blue;
+  width: 200px;
+  height: 200px; /* Posisi objek bisa disesuaikan agar saling tumpang tindih */
+}
+
 
     </style>
     <div class="container">
@@ -511,16 +558,21 @@ nav ul li a:hover {
         </div>
     </div>
 
-    <div class="keunggulan">
-        <div class="satu">
-            <img src="ya.png" alt="">
-        </div>
-        <div class="kotak">
-            <div class="kotak1">Fresh from the oven</div>
-            <div class="kotak2">harga yang terjangkau</div>
-            <div class="kotak3">tanpa bahan pengawet</div>
-            <div class="kotak4">Banyak varian rasa</div>
-        </div>
+    <div class="testimonial">
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+              <div class="testimonial-img">
+                <img src="https://via.placeholder.com/100" alt="Profile Image">
+              </div>
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec venenatis risus."
+                </p>
+                <h3 class="testimonial-name">John Doe</h3>
+                <p class="testimonial-position">CEO, Example Company</p>
+              </div>
+            </div>
+          </div>
     </div>
 
 	<div class="seg4">
@@ -545,6 +597,10 @@ nav ul li a:hover {
     </div>
             </div>
         </nav>
+
+        <div class="front">Ini di depan</div>
+<div class="back">Ini di belakang</div>
+
     </div>
 
     <script>
@@ -571,3 +627,111 @@ nav ul li a:hover {
 
 </body>
 </html>
+
+
+	<section class="review" id="p4">
+        <h1 class="judul"> Customer's <span>review</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Aku kemarin beli di cabang Korea, enak bangetttt. Sampe aku beli lagi dan lagi</p>
+                <div class="user">
+                    <img src="LEE KNOW ❤.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Lee Know</h3>
+                        <span>Happy Customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>Wow sih ini yang buat bahaya banget bisa bikin gue ketagihan. BTW 08 berapa, cantik?</p>
+                <div class="user">
+                    <img src="Heeseung.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Lee Heeseung si Penguasa Bumi</h3>
+                        <span>Happy Customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>enak banget buat nemenin pas lagi kerja, berasa ditemenin sama ownernya</p>
+                <div class="user">
+                    <img src="EUNHO.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Eunho aja</h3>
+                        <span>Happy Customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+               
+                <div class="user">
+                    <img src="mingi.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Lee Know</h3>
+                        <span>Happy Customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="user">
+                    <img src="Noah.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Lee Know</h3>
+                        <span>Happy Customer</span>
+                    </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+            </div>
+        </div>
+    </section>
